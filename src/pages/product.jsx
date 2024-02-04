@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "../components/elements/Button";
 import CardProduct from "../components/fragments/CardProduct";
 
@@ -68,6 +68,15 @@ const ProductPage = () => {
     }
   };
 
+  const totalPriceRef = useRef(null);
+  useEffect(() => {
+    if (cart.length > 0) {
+      totalPriceRef.current.style.display = "table-row";
+    } else {
+      totalPriceRef.current.style.display = "none";
+    }
+  }, [cart]);
+
   return (
     <>
       <div className="flex h-20 items-center justify-end px-10 text-white bg-blue-900">
@@ -131,7 +140,7 @@ const ProductPage = () => {
                   </tr>
                 );
               })}
-              <tr>
+              <tr ref={totalPriceRef}>
                 <td colSpan={3}>
                   <b> Total Price :</b>
                 </td>
