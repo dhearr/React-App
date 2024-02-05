@@ -18,5 +18,6 @@ module.exports = {
     ],
     "react/prop-types": "off",
     "react/display-name": "off",
+    "react-hooks/exhaustive-deps": "off",
   },
 };
