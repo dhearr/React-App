@@ -35,7 +35,7 @@ const FormRegister = () => {
         type="password"
         placeholder="********"
       />
-      <Button variant="bg-blue-600 w-full">Login</Button>
+      <Button variant="bg-blue-600 w-full">Register</Button>
     </form>
   );
 };

@@ -6,7 +6,7 @@ const store = configureStore({
     cart: cartReducer,
   },
 });
-console.log("initial state", store.getState());
+// console.log("initial state", store.getState());
 
 store.subscribe(() => {
   console.log("Updated State", store.getState());
